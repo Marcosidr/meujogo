@@ -1,28 +1,30 @@
+/* RESET CSS - deve ser sempre o primeiro */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', Arial, sans-serif;
-    color: #333;
-    font-size: 18px;
-    background-color: #fff;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #333;
+  font-size: 18px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
   
   .header {
-    background-color: #222;
-    padding: 10px 0;
+    
+    padding: 15px 0;
   }
   
   .header-logo img {
-    height: 80px;
+    height:80px;
+
   }
   
   .header-menu {
@@ -124,28 +126,49 @@
   .Personagens {
     background-color: #f1f1f1;
     padding: 50px 0;
-    h2 {
+    h1 {
         margin: 0;
+        text-transform: uppercase;
+        text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         color: #dc00e7;
         p {
             margin: auto;
             padding: 10px;
             font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
         }
     }
   }
+ .historia {
+  h1{
+    color: #dc00e7;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 50px 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  P {
+    text-align: center;
+ 
+    margin: 30px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;  
+    padding-right: 20px;
+  }
+ }
   
   .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff;
+    color: #dc00e7;
     text-align: center;
     padding: 30px 0;
     position: relative;
+    margin: 10px;
   }
   
   .footer a {
-    color: #ccc;
+    color: #000000;
     font-size: 1.5em;
     margin: 0 10px;
     text-decoration: none;
@@ -160,7 +183,7 @@
   }
   
   .footer a:hover {
-    color: white;
+    color: #dc00e7;
   }
   
   /* Telas maiores */
