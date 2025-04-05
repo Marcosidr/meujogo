@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GhostBlade</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="images/icone.png" type="image/png">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo" title="Home">
+        <img src="images/logo.png" alt="Logo GhostBlade" />
+      </a>
+      <button onclick="mostrarMenu()" class="header-menu" title="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="index.html" title="Home">Home</a></li>
+          <li><a href="sobre.html" title="Sobre">Sobre</a></li>
+          <li><a href="jogo.html" title="Notícias">Notícias</a></li>
+          <li><a href="contato.html" title="Contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Mobile -->
+    <section class="banner-mobile" data-aos="flip-left">
+      <img src="images/BANNER.png" alt="Banner do jogo GhostBlade" class="banner-img" />
+      <p><a href="jogo.html" class="btn" title="Jogar">Jogar</a></p>
+    </section>
+
+    <!-- Banner Desktop -->
+    <section class="banner-desktop">
+      <div class="container">
+        <div class="flex">
+          <div class="col" data-aos="flip-left">
+            <img src="images/BANNER.png" alt="Banner do jogo GhostBlade" class="banner-img" />
+            <p><a href="jogo.html" class="btn" title="Jogar">Jogar</a></p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personagens -->
+    <section class="Personagens">
+      <div class="container">
+        <h2>Personagens do Jogo</h2>
+        <div class="flex">
+          <div class="col">
+            <img src="images/01.png" alt="Ryujin Takeda" />
+            <h3>Ryujin Takeda</h3>
+            <p>Um guerreiro habilidoso com uma lâmina
+                ancestral, destinado a enfrentar os
+                horrores do sobrenatural.</p>
+          </div>
+          <div class="col">
+            <img src="images/02.png" alt="Kazurath" />
+            <h3>Kazurath</h3>
+            <p>Um espírito maligno menor, que se
+                alimenta do medo e tenta enganar suas
+                vítimas com ilusões.</p>
+          </div>
+          <div class="col">
+            <img src="images/03.png" alt="Yurei no Akuma" />
+            <h3>Yurei no Akuma</h3>
+            <p>Um espírito vingativo aprisionado entre os
+                mundos, assombrando suas presas com
+                uma presença aterrorizante e quase
+                imortal.
+                
+                </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Todos os direitos reservados - Desenvolvido por Marcos Inácio</p>
+      <hr />
+      <p>
+        <a href="http://facebook.com" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="http://instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="http://youtube.com" title="Youtube"><i class="fab fa-youtube"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    function mostrarMenu() {
+      document.querySelector(".header-nav").classList.toggle("ativo");
+    }
+    AOS.init();
+  </script>
+</body>
+</html>

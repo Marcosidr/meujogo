@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    font-size: 18px;
+    background-color: #fff;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #222;
+    padding: 10px 0;
+  }
+  
+  .header-logo img {
+    height: 80px;
+  }
+  
+  .header-menu {
+    border: 1px solid white;
+    color: white;
+    float: right;
+    font-size: 2em;
+    padding: 10px;
+    margin: 10px;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .header-nav {
+    display: none;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .header-nav ul {
+    list-style: none;
+  }
+  
+  .header-nav ul li {
+    padding: 10px;
+  }
+  
+  .header-nav ul li a {
+    text-transform: uppercase;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .header-nav.ativo {
+    display: block;
+  }
+  
+  .banner-mobile {
+    background-color: #333;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .banner-mobile img.banner-img {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  .banner-desktop {
+    display: none;
+  }
+  
+  .btn {
+    background-color: #dc00e7;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    p {
+      text-align: center;
+      margin: 20px 0;
+     font-family: Arial, Helvetica, sans-serif;
+    }	
+    h3 {
+        text-align: center;
+        margin: 20px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #dc00e7;
+    }
+  }
+  
+  .col {
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+  }
+  
+  .col img {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .Personagens {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+    h2 {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #dc00e7;
+        p {
+            margin: auto;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+  }
+  
+  .footer a {
+    color: #ccc;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    .container {
+        P {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 10px;
+        } 
+        
+    }
+  }
+  
+  .footer a:hover {
+    color: white;
+  }
+  
+  /* Telas maiores */
+  @media (min-width: 1000px) {
+    .header-menu {
+      display: none;
+    }
+  
+    .header-nav {
+      display: block !important;
+      float: right;
+    }
+  
+    .header-nav ul li {
+      display: inline-block;
+    }
+  
+    .header-nav ul li a {
+      padding: 27px;
+    }
+  
+    .header-nav ul li a:hover {
+      color: white;
+      border-bottom: 5px solid #dc00e7;
+    }
+  
+    .banner-mobile {
+      display: none;
+    }
+  
+    .banner-desktop {
+      display: block;
+      height: 700px;
+      background: url(../images/banner.jpg) center no-repeat;
+      background-size: cover;
+    }
+  
+    .banner-desktop .flex {
+      padding-top: 100px;
+    }
+  }
+  
