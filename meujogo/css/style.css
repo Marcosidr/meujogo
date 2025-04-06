@@ -148,6 +148,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
   P {
+  
     text-align: center;
     margin: 30px 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -155,7 +156,7 @@ body {
     padding-right: 20px;
   }
  }
-
+ 
  .como-jogar-wrapper {
   display: flex;
   justify-content: space-between;
@@ -223,6 +224,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
   h2 {
+  
     text-align: center;
     margin: 30px 0;
     font-family: Arial, Helvetica, sans-serif;
