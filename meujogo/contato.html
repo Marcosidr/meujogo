@@ -25,12 +25,10 @@
     }
   </style>
 
-  
   <header>
-    <div class="header-container">
+    <div class="header-container" data-aos="fade-down" data-aos-duration="1000">
       <a href="index.html" class="header-logo" title="Home">
         <img src="images/logo.png" alt="Logo GhostBlade" />
-      </a>
       </a>
       <button onclick="MostrarMenu()" title="Menu" class="header-menu" aria-label="Abrir menu">
         <i class="fa-solid fa-bars"></i>
@@ -38,59 +36,53 @@
       <nav class="header-nav">
         <ul>
           <li><a href="index.html" class="btn2" title="Home"><i class="fa-solid fa-house"></i> Home</a></li>
-          
         </ul>
       </nav>
     </div>
   </header>
-  <header>
-    <style>
-      header {
-        background-image: url("images/1.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        margin: auto;
-      }
-    </style>
-  </header>
-  
- 
+
+  <style>
+    header {
+      background-image: url("images/1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      margin: auto;
+    }
+  </style>
+
   <main>
- 
-    </section>
-    <div class="logo">
+    <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
       <img src="images/logo.png" alt="Meu jogo" />
     </div>
-    
-    <section class="container">
+
+    <section class="container" data-aos="fade-up" data-aos-duration="1200">
       <form id="formContato" method="post" autocomplete="off" title="Formulário de contato">
-        <div class="form-group">
+        <div class="form-group" data-aos="fade-right" data-aos-delay="200">
           <label for="nome">Nome:</label>
           <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" maxlength="40" required />
         </div>
 
-        <div class="form-group">
+        <div class="form-group" data-aos="fade-right" data-aos-delay="400">
           <label for="email">E-mail:</label>
           <input type="email" name="email" id="email" placeholder="Digite seu e-mail" maxlength="40" required />
         </div>
 
-        <div class="form-group">
+        <div class="form-group" data-aos="fade-right" data-aos-delay="600">
           <label for="mensagem">Mensagem:</label>
           <textarea name="mensagem" id="mensagem" rows="8" placeholder="Digite sua mensagem..." required></textarea>
         </div>
 
-        <div class="botoes">
+        <div class="botoes" data-aos="fade-up" data-aos-delay="800">
           <button type="submit" class="green" id="botao" title="Enviar">Enviar</button>
           <button type="reset" class="red" title="Redefinir">Redefinir</button>
         </div>
       </form>
     </section>
   </main>
-   
 
-  <footer>
+  <footer data-aos="fade-up" data-aos-duration="1000">
     <div class="footer-content">
       <h3 class="dosis">GhostBlade</h3>
       <p>Desenvolvido por Marcos Inácio</p>
@@ -101,7 +93,7 @@
       </div>
     </div>
   </footer>
-      
+
   <style>
     footer {
       background-image: url("images/1.png");
@@ -111,55 +103,45 @@
       background-position: center;
       margin: auto;
     }
-  </style><!-- Importa a biblioteca jQuery versão 1.11.3 -->
-<script src="js/jquery-1.11.3.min.js"></script>
+  </style>
 
-<!-- Importa a biblioteca AOS (Animate On Scroll) para animações ao rolar a página -->
-<script src="js/aos.js"></script>
+  <!-- Scripts -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    // Inicializa as animações AOS
+    AOS.init({
+      once: true,
+      duration: 800
+    });
 
-<script>
-  // Função para mostrar ou esconder o menu ao clicar no botão de menu (mobile, por exemplo)
-  function MostrarMenu() {
-    // Seleciona o elemento com a classe 'header-nav' e alterna a classe 'ativo'
-    document.querySelector('.header-nav').classList.toggle('ativo');
-  }
-
-  // Obtém o formulário com id 'formContato'
-  const form = document.getElementById('formContato');
-
-  // Função para validar o formato do e-mail usando expressão regular
-  const validateEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-  // Adiciona um ouvinte de evento para o envio do formulário
-  form.addEventListener('submit', function (e) {
-    // Impede o envio padrão do formulário (evita recarregar a página)
-    e.preventDefault();
-
-    // Obtém e remove espaços em branco dos campos nome, email e mensagem
-    const nome = form.nome.value.trim();
-    const email = form.email.value.trim();
-    const mensagem = form.mensagem.value.trim();
-
-    // Verifica se algum campo está vazio
-    if (!nome || !email || !mensagem) {
-      alert('Por favor, preencha todos os campos.');
-      return; // Interrompe o envio
+    function MostrarMenu() {
+      document.querySelector('.header-nav').classList.toggle('ativo');
     }
 
-    // Verifica se o e-mail é válido
-    if (!validateEmail(email)) {
-      alert('E-mail inválido.');
-      return; // Interrompe o envio
-    }
+    const form = document.getElementById('formContato');
+    const validateEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-    // Se tudo estiver certo, exibe mensagem de sucesso
-    alert('Mensagem enviada com sucesso!');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    // Limpa todos os campos do formulário
-    form.reset();
-  });
-</script>
+      const nome = form.nome.value.trim();
+      const email = form.email.value.trim();
+      const mensagem = form.mensagem.value.trim();
 
+      if (!nome || !email || !mensagem) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        alert('E-mail inválido.');
+        return;
+      }
+
+      alert('Mensagem enviada com sucesso!');
+      form.reset();
+    });
   </script>
 </body>
 
