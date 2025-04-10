@@ -111,38 +111,55 @@
       background-position: center;
       margin: auto;
     }
-  </style>
+  </style><!-- Importa a biblioteca jQuery versão 1.11.3 -->
+<script src="js/jquery-1.11.3.min.js"></script>
 
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script>
-    function MostrarMenu() {
-      document.querySelector('.header-nav').classList.toggle('ativo');
+<!-- Importa a biblioteca AOS (Animate On Scroll) para animações ao rolar a página -->
+<script src="js/aos.js"></script>
+
+<script>
+  // Função para mostrar ou esconder o menu ao clicar no botão de menu (mobile, por exemplo)
+  function MostrarMenu() {
+    // Seleciona o elemento com a classe 'header-nav' e alterna a classe 'ativo'
+    document.querySelector('.header-nav').classList.toggle('ativo');
+  }
+
+  // Obtém o formulário com id 'formContato'
+  const form = document.getElementById('formContato');
+
+  // Função para validar o formato do e-mail usando expressão regular
+  const validateEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  // Adiciona um ouvinte de evento para o envio do formulário
+  form.addEventListener('submit', function (e) {
+    // Impede o envio padrão do formulário (evita recarregar a página)
+    e.preventDefault();
+
+    // Obtém e remove espaços em branco dos campos nome, email e mensagem
+    const nome = form.nome.value.trim();
+    const email = form.email.value.trim();
+    const mensagem = form.mensagem.value.trim();
+
+    // Verifica se algum campo está vazio
+    if (!nome || !email || !mensagem) {
+      alert('Por favor, preencha todos os campos.');
+      return; // Interrompe o envio
     }
 
-    const form = document.getElementById('formContato');
-    const validateEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    // Verifica se o e-mail é válido
+    if (!validateEmail(email)) {
+      alert('E-mail inválido.');
+      return; // Interrompe o envio
+    }
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+    // Se tudo estiver certo, exibe mensagem de sucesso
+    alert('Mensagem enviada com sucesso!');
 
-      const nome = form.nome.value.trim();
-      const email = form.email.value.trim();
-      const mensagem = form.mensagem.value.trim();
+    // Limpa todos os campos do formulário
+    form.reset();
+  });
+</script>
 
-      if (!nome || !email || !mensagem) {
-        alert('Por favor, preencha todos os campos.');
-        return;
-      }
-
-      if (!validateEmail(email)) {
-        alert('E-mail inválido.');
-        return;
-      }
-
-      alert('Mensagem enviada com sucesso!');
-      form.reset();
-    });
   </script>
 </body>
 

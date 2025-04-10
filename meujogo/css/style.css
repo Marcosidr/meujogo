@@ -250,6 +250,19 @@ footer {
   padding: 20px 0;
   margin-top: 50px;
 }
+.footer-content {
+  a {
+    color: #dc00e7;
+    text-decoration: none;
+    padding: 5px;
+
+  }
+  a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+}
   /* Telas maiores */
   @media (min-width: 1000px) {
     .header-menu {
