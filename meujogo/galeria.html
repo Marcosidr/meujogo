@@ -1,12 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>GALERIA DO JOGO</title>
+  <!-- Define o conjunto de caracteres e a escala do viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria do Jogo - GhostBlade</title>
+
+  <!-- Importa a fonte Orbitron do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/icone.png" type="image/png">
+
+  <style>
+    /* Reset básico e modelo de caixa */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilização do corpo da página */
+    body {
+      background: linear-gradient(to bottom, #0a0a0a, #1c1c1c); /* Gradiente escuro */
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      min-height: 100vh;
+      background-image: url('images/1.png'); /* Imagem de fundo */
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      backdrop-filter: brightness(0.4); /* Escurece o fundo */
+    }
+
+    /* Estilização do cabeçalho */
+    header {
+      background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro com transparência */
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      box-shadow: 0 0 15px #dc00e7; /* Brilho ao redor */
+      border-bottom: 2px solid #dc00e7; /* Borda inferior */
+    }
+
+    /* Título principal do cabeçalho */
+    header h1 {
+      font-size: 2rem;
+      color: #dc00e7;
+      text-shadow: 0 0 10px #dc00e7; /* Sombra brilhante */
+      margin-bottom: 0.5rem;
+    }
+
+    /* Subtítulo do cabeçalho */
+    header h2 {
+      font-size: 1rem;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    /* Container da galeria em formato de grid responsivo */
+    .galeria-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid flexível */
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Estilo de cada "card" da galeria */
+    .galeria-container div {
+      background-color: rgba(255, 255, 255, 0.03); /* Leve transparência */
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 15px #000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efeito de hover nos cards */
+    .galeria-container div:hover {
+      transform: translateY(-5px); /* Sobe levemente */
+      box-shadow: 0 0 25px #dc00e7; /* Brilho rosa */
+    }
+
+    /* Títulos das imagens da galeria */
+    .galeria-container h3 {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Imagens da galeria */
+    .galeria-container img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #dc00e7; /* Borda rosa neon */
+      transition: transform 0.3s ease;
+    }
+
+    /* Efeito hover nas imagens */
+    .galeria-container img:hover {
+      transform: scale(1.03); /* Aumenta um pouco */
+    }
+
+    /* Botão de voltar ao início */
+    .voltar {
+      display: block;
+      text-align: center;
+      margin: 3rem auto;
+      font-size: 1.1rem;
+      color: white;
+      text-decoration: none;
+      padding: 0.7rem 2rem;
+      border: 2px solid white;
+      border-radius: 8px;
+      width: fit-content;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Efeito hover no botão de voltar */
+    .voltar:hover {
+      background: #dc00e7;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Responsividade para telas menores */
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      header h2 {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <!-- Cabeçalho com título e descrição -->
+  <header>
+    <h1>Galeria do Jogo - GhostBlade</h1>
+    <h2>Aqui você vai conhecer todas as fases e telas do jogo</h2>
+  </header>
+
+  <!-- Container principal da galeria -->
+  <div class="galeria-container">
+    <!-- Cada bloco representa uma tela do jogo -->
+    <div>
+      <h3>Tela de Início</h3>
+      <img src="images/GALERIA/b1.png" alt="Tela de início do jogo" />
+    </div>
+    <div>
+      <h3>Tela de Game Over</h3>
+      <img src="images/GALERIA/b2.png" alt="Tela de Game Over" />
+    </div>
+    <div>
+      <h3>Primeira Fase</h3>
+      <img src="images/GALERIA/b3.png" alt="Imagem da primeira fase" />
+    </div>
+    <div>
+      <h3>Durante a Fase</h3>
+      <img src="images/GALERIA/b4.png" alt="Imagem durante o gameplay da fase" />
+    </div>
+    <div>
+      <h3>Segunda Fase</h3>
+      <img src="images/GALERIA/b5.png" alt="Imagem da segunda fase" />
+    </div>
+    <div>
+      <h3>Final da Segunda Fase</h3>
+      <img src="images/GALERIA/b6.png" alt="Imagem final da segunda fase" />
+    </div>
+  </div>
+
+  <!-- Link para voltar à página inicial -->
+  <a href="index.html" class="voltar">Voltar para o início</a>
+  
 </body>
-</html>t
+</html>

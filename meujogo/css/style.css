@@ -1,163 +1,179 @@
-/* RESET CSS - deve ser sempre o primeiro */
+/* RESET CSS - Remove margens e paddings padrões e define o box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Define a fonte padrão e cor do texto no body */
 body {
   font-family: 'Roboto', Arial, sans-serif;
   color: #333;
   font-size: 18px;
 }
 
+/* Define largura máxima do container e centraliza */
 .container {
   width: 80%;
   margin: 0 auto;
 }
 
-  
-  .header {
-    
-    padding: 15px 0;
-  }
-  
-  .header-logo img {
-    height:80px;
+/* ----- HEADER ----- */
 
-  }
-  
-  .header-menu {
-    border: 1px solid white;
-    color: white;
-    float: right;
-    font-size: 2em;
-    padding: 10px;
-    margin: 10px;
-    background: none;
-    cursor: pointer;
-  }
-  
-  .header-nav {
-    display: none;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .header-nav ul {
-    list-style: none;
-  }
-  
-  .header-nav ul li {
-    padding: 10px;
-  }
-  
-  .header-nav ul li a {
-    text-transform: uppercase;
-    color: #ccc;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .header-nav.ativo {
-    display: block;
-  }
-  
-  .banner-mobile {
-    background-color: #333;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  .banner-mobile img.banner-img {
-    width: 80%;
-    margin: 20px auto;
-    display: block;
-  }
-  
-  .banner-desktop {
-    display: none;
-  }
-  
-  .btn {
-    background-color: #dc00e7;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    display: inline-block;
-    border-radius: 5px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin: 50px 0;
-  }
-  
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    p {
-      text-align: center;
-      margin: 20px 0;
-     font-family: Arial, Helvetica, sans-serif;
-    }	
-    h3 {
-        text-align: center;
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #dc00e7;
-    }
-  }
-  
-  .col {
-    text-align: center;
-    flex: 1;
-    min-width: 250px;
-    margin: 20px;
-  }
-  
-  .col img {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .Personagens { 
-    padding: 50px 0;
-    h1 {
-        margin: 0;
-        text-transform: uppercase;
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #dc00e7;
-        p {
-            margin: auto;
-            padding: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
-    }
-  }
- .historia {
-  h1{
-    color: #dc00e7;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 50px 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  P {
-  
-    text-align: center;
-    margin: 30px 0;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-left: 20px;  
-    padding-right: 20px;
-  }
- }
- 
- .como-jogar-wrapper {
+.header {
+  padding: 15px 0; /* Espaçamento superior e inferior */
+}
+
+.header-logo img {
+  height: 80px; /* Tamanho do logo */
+}
+
+.header-menu {
+  /* Botão de menu (hamburguer) */
+  border: 1px solid white;
+  color: white;
+  float: right;
+  font-size: 2em;
+  padding: 10px;
+  margin: 10px;
+  background: none;
+  cursor: pointer;
+}
+
+.header-nav {
+  /* Navegação oculta inicialmente (visível no menu mobile) */
+  display: none;
+  text-align: center;
+  padding: 10px;
+}
+
+.header-nav ul {
+  list-style: none; /* Remove marcadores da lista */
+}
+
+.header-nav ul li {
+  padding: 10px;
+}
+
+.header-nav ul li a {
+  text-transform: uppercase;
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-nav.ativo {
+  display: block; /* Mostra menu quando ativo */
+}
+
+/* ----- BANNER MOBILE ----- */
+
+.banner-mobile {
+  background-color: #333;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.banner-mobile img.banner-img {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Esconde o banner desktop por padrão */
+.banner-desktop {
+  display: none;
+}
+
+/* ----- BOTÃO GENÉRICO ----- */
+.btn {
+  background-color: #dc00e7;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+/* ----- TÍTULOS GERAIS ----- */
+h2 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+/* ----- GRID FLEXÍVEL ----- */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex p {
+  text-align: center;
+  margin: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex h3 {
+  text-align: center;
+  margin: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dc00e7;
+}
+
+/* ----- COLUNAS FLEX ----- */
+.col {
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+}
+
+.col img {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* ----- SEÇÃO: PERSONAGENS ----- */
+.Personagens {
+  padding: 50px 0;
+}
+
+.Personagens h1 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dc00e7;
+}
+
+.Personagens h1 p {
+  margin: auto;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* ----- SEÇÃO: HISTÓRIA ----- */
+.historia h1 {
+  color: #dc00e7;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 50px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.historia p {
+  text-align: center;
+  margin: 30px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ----- SEÇÃO: COMO JOGAR ----- */
+.como-jogar-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -184,6 +200,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ----- BLOCOS DE EXPLICAÇÃO ----- */
 .blocos {
   display: flex;
   justify-content: center;
@@ -212,37 +229,41 @@ body {
   margin: 8px 0;
 }
 
-
- .contato {
+/* ----- SEÇÃO: CONTATO ----- */
+.contato {
   background-color: #f1f1f1;
-    padding: 50px 0;
-  h1 {
-    color: #dc00e7;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 50px 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  h2 {
-  
-    text-align: center;
-    margin: 30px 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-button {
-    background-color: #dc00e7;
-    color: #fff;
-    padding: 10px 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  button:hover {
-    background-color: #ffffff;
-    color: #dc00e7;
-  }
- }
-/* roda pé */
+  padding: 50px 0;
+}
+
+.contato h1 {
+  color: #dc00e7;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 50px 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.contato h2 {
+  text-align: center;
+  margin: 30px 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.contato button {
+  background-color: #dc00e7;
+  color: #fff;
+  padding: 10px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.contato button:hover {
+  background-color: #ffffff;
+  color: #dc00e7;
+}
+
+/* ----- RODAPÉ ----- */
 footer {
   background-color: #333;
   color: white;
@@ -250,70 +271,70 @@ footer {
   padding: 20px 0;
   margin-top: 50px;
 }
-.footer-content {
-  a {
-    color: #dc00e7;
-    text-decoration: none;
-    padding: 5px;
 
-  }
-  a:hover {
-    color: white;
-    text-decoration: underline;
-  }
-
+.footer-content a {
+  color: #dc00e7;
+  text-decoration: none;
+  padding: 5px;
 }
-  /* Telas maiores */
-  @media (min-width: 1000px) {
-    .header-menu {
-      display: none;
-    }
-  
-    .header-nav {
-      display: block !important;
-      float: right;
-    }
-  
-    .header-nav ul li {
-      display: inline-block;
-    }
-  
-    .header-nav ul li a {
-      padding: 27px;
-    }
-  
-    .header-nav ul li a:hover {
-      color: white;
-      border-bottom: 5px solid #dc00e7;
-    }
-  
-    .banner-mobile {
-      display: none;
-    }
-  
-    .banner-desktop {
-      display: block;
-      height: 700px;
-      background-size: cover;
-      text-align: center;
-      a{
-        display: inline-block;
-        text-align: center;
-        margin-top: 100px;
-        font-size: 2em;
-        color: #fff;
-        text-decoration: none;
-        background-color: #dc00e7;
-        border-radius: 5px;
-      }
-      a:hover {
-        background-color: #ffffff;
-        color: #dc00e7;
-      }
-    }
-  
-    .banner-desktop .flex {
-      padding-top: 100px;
-    }
+
+.footer-content a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ----- RESPONSIVO: TELAS MAIORES ----- */
+@media (min-width: 1000px) {
+  .header-menu {
+    display: none; /* Esconde o menu hambúrguer */
   }
-  
+
+  .header-nav {
+    display: block !important;
+    float: right;
+  }
+
+  .header-nav ul li {
+    display: inline-block;
+  }
+
+  .header-nav ul li a {
+    padding: 27px;
+  }
+
+  .header-nav ul li a:hover {
+    color: white;
+    border-bottom: 5px solid #dc00e7;
+  }
+
+  .banner-mobile {
+    display: none; /* Esconde o banner mobile */
+  }
+
+  .banner-desktop {
+    display: block; /* Mostra o banner desktop */
+    height: 700px;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .banner-desktop a {
+    display: inline-block;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+    background-color: #dc00e7;
+    border-radius: 5px;
+  }
+
+  .banner-desktop a:hover {
+    background-color: #ffffff;
+    color: #dc00e7;
+  }
+
+  .banner-desktop .flex {
+    padding-top: 100px;
+  }
+}
