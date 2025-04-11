@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Dosis', sans-serif;
     color: #fff;
     background-color: #0d0d0d;
   }
@@ -151,36 +151,40 @@ body {
     transform: scale(1.2);
   }
   
-  /* Responsivo */
-  @media (max-width: 768px) {
-    .header-nav ul {
-      flex-direction: column;
-      background-color: #111;
-      display: none;
-      padding: 20px;
-      border-radius: 10px;
-    }
-  
-    .header-nav.ativo ul {
-      display: flex;
-    }
-  
-    .header-menu {
-      display: block;
-    }
-  
-    section {
-      margin: 30px 15px;
-      padding: 25px;
-    }
-  
-    .sobre-info h2 {
-      font-size: 22px;
-    }
-  
-    .sobre-info p,
-    .sobre-info li {
-      font-size: 16px;
-    }
+ /* Responsivo */
+@media (max-width: 768px) {
+  /* Esconde a logo central no mobile */
+  .logo {
+    display: none;
   }
-  
+
+  .header-nav ul {
+    flex-direction: column;
+    background-color: #111;
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .header-nav.ativo ul {
+    display: flex;
+  }
+
+  .header-menu {
+    display: block;
+  }
+
+  section {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+
+  .sobre-info h2 {
+    font-size: 22px;
+  }
+
+  .sobre-info p,
+  .sobre-info li {
+    font-size: 16px;
+  }
+}

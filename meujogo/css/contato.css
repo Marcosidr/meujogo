@@ -191,6 +191,12 @@ footer p {
 
 /* Responsivo */
 @media (max-width: 768px) {
+  /* Esconde a logo central no mobile */
+  .logo {
+    display: none;
+  }
+
+  /* Navegação do cabeçalho */
   .header-nav ul {
     flex-direction: column;
     background-color: #111;
@@ -207,7 +213,11 @@ footer p {
     display: block;
   }
 
+  /* Botões em coluna no mobile */
   .botoes {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 15px; /* espaçamento entre os botões */
   }
 }
