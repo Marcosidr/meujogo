@@ -1,137 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/sobre.css">
-
-    <link rel="shortcut icon" href="images/icone.png" type="image/png">
-    <title>SOBRE O JOGO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre - GhostBlade</title>
+  <link rel="shortcut icon" href="images/icone.png" type="image/png">
+  <link rel="stylesheet" href="css/sobre.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/aos.css" />
 </head>
 
-<body>
-    <style>
-        body {
-            background-image: url("images/sky.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-        }
-    </style>
-    <header class="header" data-aos="fade-down">
-        <div class="container">
-            <a href="index.html" class="header-logo" title="Home">
-                <img src="images/logo.png" alt="Logo GhostBlade" class="logo" />
+<body style="background-image: url('images/1.png'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
 
-            </a>
-        </div>
+  <header>
+    <div class="header-container" data-aos="fade-down">
+      <a href="index.html" class="header-logo" title="Home">
+        <img src="images/logo.png" alt="Logo GhostBlade" />
+      </a>
+      <button onclick="MostrarMenu()" title="Menu" class="header-menu" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <style>
+    header {
+      background-image: url("images/1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      margin: auto;
+    }
+  </style>
+</style>
+  <main>
+    <section class="sobre-container" data-aos="fade-up">
+      <div class="logo" data-aos="zoom-in">
+        <img src="images/logo.png" alt="Logo GhostBlade" />
+      </div>
 
-        <h1>
+      <div class="sobre-info">
+        <h2 data-aos="fade-right">Características do Jogo</h2>
+        <ul data-aos="fade-right" data-aos-delay="200">
+          <li>Jogo feito com Construct 3</li>
+          <li>Visual 2D estilo pixel art</li>
+          <li>2 tipos de inimigos com habilidades únicas</li>
+        </ul>
 
-            <style>
-                .logo {
-                    width: 400px;
-                    /* Ajuste o tamanho conforme necessário */
-                    height: auto;
-                    /* Mantém a proporção da imagem */
-                    display: block;
-                    margin: 0 auto;
-                    /* Centraliza a imagem */
-                }
-            </style>
-            <br>
-            <strong>GhostBlade</strong> é um jogo de ação e aventura 2D, onde o jogador assume o papel de um Samurai
-            habilidoso que deve enfrentar inimigos sobrenaturais
-            em um mundo repleto de desafios.
-            <br><br>
+        <h2 data-aos="fade-right" data-aos-delay="300">Objetivo do Jogo</h2>
+        <p data-aos="fade-right" data-aos-delay="400">
+          Derrotar inimigos, coletar habilidades e completar os níveis.
+        </p>
 
-    </header>
-    <section>
-        <div class="container">
-            <h2>Características do Jogo</h2>
-            <ul>
-                <li>Jogo Feito pelo construct 3</li>
-                <li>Pegada 2D</li>
-                <li> Estilo pixel art que lembra os clássicos. </li>
-                <li>2 tipos de inimigos, cada um com suas próprias habilidades e fraquezas.</li>
+        <h2 data-aos="fade-right" data-aos-delay="500">Tempo gasto para cada elemento</h2>
+        <ul data-aos="fade-right" data-aos-delay="600">
+          <li>Personagem: 2 horas</li>
+          <li>Inimigos: 3 horas</li>
+          <li>Cenário: 4 horas</li>
+          <li>Programação: 10 horas</li>
+          <li>Testes e ajustes: 18 horas</li>
+        </ul>
 
-            </ul>
-            <h2>Objetivo do Jogo</h2>
-            <p>O objetivo do jogo é derrotar os inimigos e completar os níveis, coletando itens e habilidades ao longo
-                do caminho.</p>
+        <h2 data-aos="fade-right" data-aos-delay="700">O que espero melhorar</h2>
+        <p data-aos="fade-right" data-aos-delay="800">
+          Jogabilidade, adicionar novos inimigos, níveis e aprimorar os gráficos.
+        </p>
 
-            <h2>Tempo gasto para realização de cada elemento do Jogo </h2>
+        <h2 data-aos="fade-right" data-aos-delay="900">O que mais gostei</h2>
+        <p data-aos="fade-right" data-aos-delay="1000">
+          Aprender mais sobre lógica de programação e criação de jogos.
+        </p>
 
-            <ul>
-                <li>Criação do personagem: 2 horas</li>
-                <li>Criação dos inimigos: 3 horas</li>
-                <li>Criação do cenário: 4 horas</li>
-                <li>Programação do jogo: 10 horas</li>
-                <li>Testes e ajustes: 18 horas</li>
-            </ul>
+        <h2 data-aos="fade-right" data-aos-delay="1100">O que aprendi</h2>
+        <p data-aos="fade-right" data-aos-delay="1200">
+          Desenvolver um jogo completo do zero, desde a arte até a lógica.
+        </p>
 
-            <h2>O que espero melhorar no proximo Bimestre em relação a esse jogo </h2>
-            <p>Espero melhorar a jogabilidade, adicionar novos níveis e inimigos, e aprimorar os gráficos do jogo.</p>
-
-            <h2>O que mais gostei de fazer nesse jogo</h2>
-            <p>Gostei de melhorar minhas técnicas de programação, por mais que seja no nível Básico ajuda bastante para
-                o começo da Faculdade</p>
-
-            <h2>O que aprendi com esse jogo</h2>
-            <p>Aprendi a criar um jogo do zero, desde a programação até os gráficos. Também aprendi a trabalhar com o
-                Construct.</p>
-            <div class="container">
-                <h2>Links úteis que mais utilizei em meu jogo</h2>
-                <ul>
-                    <li><a href="https://www.construct.net/" target="_blank">Construct 3</a></li>
-                    <li><a href="https://www.piskelapp.com/" target="_blank">Piskel</a></li>
-                    <li><a href="https://www.freepik.com/" target="_blank">Freepik</a></li>
-                    <li><a href="https://www.kenney.nl/" target="_blank">Kenney</a></li>
-                </ul>
-
-
-
-            </div>
-            <footer>
-                <p>&copy; 2025 GhostBlade. Todos os direitos reservados.</p>
-                <p>Desenvolvido por Marcos Inácio de souza Rosa</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com" target="_blank" title="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com" target="_blank" title="Facebook"><i
-                            class="fab fa-facebook"></i></a>
-                    <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                </div>
-            </footer>
-            <style>
-                footer {
-                    background-image: url("images/1.png");
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-position: center;
-                    margin: auto;
-                }
-
-                footer p {
-                    color: white;
-                    text-align: center;
-                    margin: 10px 0;
-                }
-
-                .social-links {
-                    text-align: center;
-                    margin-top: 10px;
-                }
-            </style>
-
-        </div>
-
+        <h2 data-aos="fade-right" data-aos-delay="1000">Links úteis</h2>
+        <ul data-aos="fade-right" data-aos-delay="1100">
+          <li><a href="https://www.construct.net/" target="_blank">Construct 3</a></li>
+          <li><a href="https://www.piskelapp.com/" target="_blank">Piskel</a></li>
+          <li><a href="https://www.freepik.com/" target="_blank">Freepik</a></li>
+          <li><a href="https://www.kenney.nl/" target="_blank">Kenney</a></li>
+        </ul>
+      </div>
     </section>
-    </h1>
+  </main>
+
+  <footer data-aos="fade-up">
+    <div class="footer-content">
+      <h3 class="dosis">GhostBlade</h3>
+      <p>Desenvolvido por Marcos Inácio</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+  <style>
+    footer {
+      background-image: url("images/1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      margin: auto;
+    }
+  </style>
+  <!-- Scripts -->
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+
+    function MostrarMenu() {
+      document.querySelector('.header-nav').classList.toggle('ativo');
+    }
+  </script>
 </body>
 
 </html>
