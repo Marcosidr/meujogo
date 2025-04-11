@@ -1,73 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <!-- Define o conjunto de caracteres e a escala do viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galeria do Jogo - GhostBlade</title>
 
-  <!-- Importa a fonte Orbitron do Google Fonts -->
+  <!-- Fonte Orbitron -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="images/icone.png" type="image/png">
 
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
-    /* Reset básico e modelo de caixa */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Estilização do corpo da página */
     body {
-      background: linear-gradient(to bottom, #0a0a0a, #1c1c1c); /* Gradiente escuro */
+      background: linear-gradient(to bottom, #0a0a0a, #1c1c1c);
       color: #fff;
       font-family: 'Orbitron', sans-serif;
       min-height: 100vh;
-      background-image: url('images/1.png'); /* Imagem de fundo */
+      background-image: url('images/1.png');
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
-      backdrop-filter: brightness(0.4); /* Escurece o fundo */
+      backdrop-filter: brightness(0.4);
     }
 
-    /* Estilização do cabeçalho */
     header {
-      background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro com transparência */
+      background-color: rgba(0, 0, 0, 0.85);
       text-align: center;
       padding: 3rem 1rem 2rem;
-      box-shadow: 0 0 15px #dc00e7; /* Brilho ao redor */
-      border-bottom: 2px solid #dc00e7; /* Borda inferior */
+      box-shadow: 0 0 15px #dc00e7;
+      border-bottom: 2px solid #dc00e7;
     }
 
-    /* Título principal do cabeçalho */
     header h1 {
       font-size: 2rem;
       color: #dc00e7;
-      text-shadow: 0 0 10px #dc00e7; /* Sombra brilhante */
+      text-shadow: 0 0 10px #dc00e7;
       margin-bottom: 0.5rem;
     }
 
-    /* Subtítulo do cabeçalho */
     header h2 {
       font-size: 1rem;
       color: #fff;
       letter-spacing: 1px;
     }
 
-    /* Container da galeria em formato de grid responsivo */
     .galeria-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid flexível */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
       padding: 3rem 2rem;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    /* Estilo de cada "card" da galeria */
     .galeria-container div {
-      background-color: rgba(255, 255, 255, 0.03); /* Leve transparência */
+      background-color: rgba(255, 255, 255, 0.03);
       border: 1px solid #444;
       border-radius: 10px;
       padding: 1rem;
@@ -75,13 +70,11 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Efeito de hover nos cards */
     .galeria-container div:hover {
-      transform: translateY(-5px); /* Sobe levemente */
-      box-shadow: 0 0 25px #dc00e7; /* Brilho rosa */
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #dc00e7;
     }
 
-    /* Títulos das imagens da galeria */
     .galeria-container h3 {
       font-size: 1rem;
       margin-bottom: 0.8rem;
@@ -91,20 +84,17 @@
       letter-spacing: 1px;
     }
 
-    /* Imagens da galeria */
     .galeria-container img {
       width: 100%;
       border-radius: 10px;
-      border: 2px solid #dc00e7; /* Borda rosa neon */
+      border: 2px solid #dc00e7;
       transition: transform 0.3s ease;
     }
 
-    /* Efeito hover nas imagens */
     .galeria-container img:hover {
-      transform: scale(1.03); /* Aumenta um pouco */
+      transform: scale(1.03);
     }
 
-    /* Botão de voltar ao início */
     .voltar {
       display: block;
       text-align: center;
@@ -119,14 +109,12 @@
       transition: background 0.3s, color 0.3s;
     }
 
-    /* Efeito hover no botão de voltar */
     .voltar:hover {
       background: #dc00e7;
       color: #000;
       font-weight: bold;
     }
 
-    /* Responsividade para telas menores */
     @media screen and (max-width: 600px) {
       header h1 {
         font-size: 1.4rem;
@@ -138,43 +126,50 @@
   </style>
 </head>
 <body>
-  <!-- Cabeçalho com título e descrição -->
-  <header>
+  <!-- Cabeçalho -->
+  <header data-aos="fade-down">
     <h1>Galeria do Jogo - GhostBlade</h1>
     <h2>Aqui você vai conhecer todas as fases e telas do jogo</h2>
   </header>
 
-  <!-- Container principal da galeria -->
+  <!-- Galeria -->
   <div class="galeria-container">
-    <!-- Cada bloco representa uma tela do jogo -->
-    <div>
+    <div data-aos="zoom-in">
       <h3>Tela de Início</h3>
       <img src="images/GALERIA/b1.png" alt="Tela de início do jogo" />
     </div>
-    <div>
+    <div data-aos="fade-up">
       <h3>Tela de Game Over</h3>
       <img src="images/GALERIA/b2.png" alt="Tela de Game Over" />
     </div>
-    <div>
+    <div data-aos="flip-left">
       <h3>Primeira Fase</h3>
       <img src="images/GALERIA/b3.png" alt="Imagem da primeira fase" />
     </div>
-    <div>
+    <div data-aos="zoom-in-up">
       <h3>Durante a Fase</h3>
       <img src="images/GALERIA/b4.png" alt="Imagem durante o gameplay da fase" />
     </div>
-    <div>
+    <div data-aos="fade-right">
       <h3>Segunda Fase</h3>
       <img src="images/GALERIA/b5.png" alt="Imagem da segunda fase" />
     </div>
-    <div>
+    <div data-aos="flip-up">
       <h3>Final da Segunda Fase</h3>
       <img src="images/GALERIA/b6.png" alt="Imagem final da segunda fase" />
     </div>
   </div>
 
-  <!-- Link para voltar à página inicial -->
+  <!-- Botão Voltar -->
   <a href="index.html" class="voltar">Voltar para o início</a>
-  
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
